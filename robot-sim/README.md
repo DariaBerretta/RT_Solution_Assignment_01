@@ -25,12 +25,12 @@ define a constant to identify the offset for the fov of the robot when it have t
 def drive(speed,seconds):
 	give to the two motors the same speed
 	attend for the seconds indicates
-	turn down the motors
+	turn off the motors
 
 def turn(speed,seconds)
 	give to the two motors same speed but opposite
 	attend for the seconds indicates
-	turn down the motors
+	turn off the motors
 	
 def find_token_silver():
 	define distance as 100
@@ -167,10 +167,11 @@ def main():
 		
 call to the main function 
 ```
-## Code improvements
+## Code details
 In order to allow the robot to move as smoothly as possible, precise functions have been developed in the code.
 Clearly the main task of the robot is to avoid the 'walls of the map', i.e. the golden tokens. 
-Precisely for this purpose it was necessary to develop two functions that allow the robot to make a choice in the event that it has to make a curve.
+Precisely for this purpose it was necessary to develop two functions that allow the robot to make a choice in the event that it has to make a curve, which means that
+the robot is in front of a corner.
 ```Python
 def find_token_gold_FOV():
 	
